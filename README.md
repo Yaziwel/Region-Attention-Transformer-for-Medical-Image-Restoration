@@ -51,7 +51,7 @@ PyTorch implementation for Region Attention Transformer for Medical Image Restor
 
 ## Citation
 
-If you find AMIR useful in your research, please consider citing:
+If you find RAT useful in your research, please consider citing:
 
 ```bibtex
 @misc{yang2024rat,
