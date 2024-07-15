@@ -28,7 +28,7 @@ Next, we will first explain how to obtain the indexed mask using SAM, followed b
   #<your_image>: Load the input image at "./example_img/input_img.png"
   ```
 
-  !!!!! It is now recommended to deploy advanced models such as  [Efficient-SAM](https://github.com/yformer/EfficientSAM), and [RWKV-SAM](https://github.com/HarborYuan/ovsam), as they provide superior efficiency and effectiveness over the conventional SAM model.
+  !!!!! It is now recommended to employ advanced models such as  [Efficient-SAM](https://github.com/yformer/EfficientSAM), and [RWKV-SAM](https://github.com/HarborYuan/ovsam), as they provide superior efficiency and effectiveness over the conventional SAM model.
 
   Then, you need to post-process the masks to obtain an indexed mask, which can be then used for compact region partitioning during the downsampling process.
 
