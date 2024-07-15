@@ -1,6 +1,6 @@
-# Region Attention Transformer for Medical Image Restoration(RAT)
+# Region Attention Transformer for Medical Image Restoration (RAT)
 
-PyTorch implementation for Region Attention Transformer for Medical Image Restoration (MICCAI 2024).
+PyTorch implementation for Region Attention Transformer for Medical Image Restoration [![arXiv](https://img.shields.io/badge/arXiv-b31b1b.svg)](https://arxiv.org/abs/2407.09268) (MICCAI 2024).
 
 ## Network Architecture
 
@@ -18,7 +18,7 @@ PyTorch implementation for Region Attention Transformer for Medical Image Restor
 
   ```python
   from segment_anything import SamAutomaticMaskGenerator, sam_model_registry
-  sam = sam_model_registry["<model_type>"](checkpoint="<path/to/checkpoint>")
+  sam = sam_model_registry["<model_type>"](checkpoint = "<path/to/checkpoint>")
   mask_generator = SamAutomaticMaskGenerator(sam)
   masks = mask_generator.generate(<your_image>)
   ```
@@ -30,10 +30,10 @@ PyTorch implementation for Region Attention Transformer for Medical Image Restor
   def toSegMap(masks): 
       result = np.zeros(masks[0]['segmentation'].shape)
       for i in range(len(masks)): 
-          result[masks[i]['segmentation']]=(i+1) 
+          result[masks[i]['segmentation']] = (i+1) 
       result[result==0] = len(masks) + 1
       return result
-  masks = sorted(masks, key=itemgetter('area'), reverse=True) 
+  masks = sorted(masks, key = itemgetter('area'), reverse = True) 
   indexed_mask = toSegMap(masks)
   ```
 
@@ -43,8 +43,8 @@ PyTorch implementation for Region Attention Transformer for Medical Image Restor
 
   ```python
   from Model_RAT import RAT
-  model=RAT()
-  out_img = model(lr_img, indexed_mask) 
+  model = RAT()
+  output_img = model(input_img, indexed_mask) 
   # lr_img shape: [B, C, H, W] 
   # indexed_mask shape: [B, H, W]
   ```
@@ -54,11 +54,11 @@ PyTorch implementation for Region Attention Transformer for Medical Image Restor
 If you find AMIR useful in your research, please consider citing:
 
 ```bibtex
-@misc{yang2024allinone,
-      title={All-In-One Medical Image Restoration via Task-Adaptive Routing}, 
-      author={Zhiwen Yang and Haowei Chen and Ziniu Qian and Yang Yi and Hui Zhang and Dan Zhao and Bingzheng Wei and Yan Xu},
+@misc{yang2024rat,
+      title={Region Attention Transformer for Medical Image Restoration}, 
+      author={Zhiwen Yang and Haowei Chen and Ziniu Qian and Yang Zhou and Hui Zhang and Dan Zhao and Bingzheng Wei and Yan Xu},
       year={2024},
-      eprint={2405.19769},
+      eprint={2407.09268},
       archivePrefix={arXiv},
       primaryClass={cs.CV}
 }
