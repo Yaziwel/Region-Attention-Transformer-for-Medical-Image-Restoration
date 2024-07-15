@@ -18,7 +18,7 @@ Next, we will first explain how to obtain the indexed mask using SAM, followed b
 
 - **Mask Prediction & Postprocess**
 
-  First, you can obtain region partitioning masks with the [Segment Anything Model](git@github.com:facebookresearch/segment-anything.git) (SAM) as follows:
+  First, you can obtain region partitioning masks with the Segment Anything Model ([SAM](https://github.com/facebookresearch/segment-anything)) as follows:
 
   ```python
   from segment_anything import SamAutomaticMaskGenerator, sam_model_registry
