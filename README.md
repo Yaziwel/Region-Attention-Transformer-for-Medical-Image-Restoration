@@ -25,8 +25,10 @@ Next, we will first explain how to obtain the indexed mask using SAM, followed b
   sam = sam_model_registry["<model_type>"](checkpoint = "<path/to/checkpoint>")
   mask_generator = SamAutomaticMaskGenerator(sam)
   masks = mask_generator.generate(<your_image>) 
-  #<your_image> = "./example_img/input_img.png"
+  #<your_image>: Load the input image at "./example_img/input_img.png"
   ```
+
+  !!!!! It is now recommended to deploy advanced models such as  [Efficient-SAM](https://github.com/yformer/EfficientSAM), and [RWKV-SAM](https://github.com/HarborYuan/ovsam), as they provide superior efficiency and effectiveness over the conventional SAM model.
 
   Then, you need to post-process the masks to obtain an indexed mask, which can be then used for compact region partitioning during the downsampling process.
 
@@ -39,7 +41,7 @@ Next, we will first explain how to obtain the indexed mask using SAM, followed b
       result[result==0] = len(masks) + 1
       return result
   masks = sorted(masks, key = itemgetter('area'), reverse = True) 
-  indexed_mask = toSegMap(masks) # Placed at "./example_img/indexed_mask.nii"
+  indexed_mask = toSegMap(masks) # Output at "./example_img/indexed_mask.nii"
   ```
 
   The resultant indexed mask is available at "./example_img/indexed_mask.nii". You can use [AMIDE](https://amide.sourceforge.net/) or [ITK-SNAP](http://www.itksnap.org/pmwiki/pmwiki.php) softwares to visualize the ".nii" file. To facilitate understanding, a toy example of the indexed mask is displayed below:
