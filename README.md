@@ -65,13 +65,13 @@ Next, we will first explain how to obtain the indexed mask using SAM, followed b
 If you find RAT useful in your research, please consider citing:
 
 ```bibtex
-@misc{yang2024rat,
-      title={Region Attention Transformer for Medical Image Restoration}, 
-      author={Zhiwen Yang and Haowei Chen and Ziniu Qian and Yang Zhou and Hui Zhang and Dan Zhao and Bingzheng Wei and Yan Xu},
-      year={2024},
-      eprint={2407.09268},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@inproceedings{yang2024rat,
+  title={Region Attention Transformer for Medical Image Restoration},
+  author={Yang, Zhiwen and Chen, Haowei and Qian, Ziniu and Zhou, Yang and Zhang, Hui and Zhao, Dan and Wei, Bingzheng and Xu, Yan},
+  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
+  pages={603--613},
+  year={2024},
+  organization={Springer}
 }
 ```
 
