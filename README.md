@@ -1,6 +1,8 @@
 # Region Attention Transformer for Medical Image Restoration (RAT)
 
-PyTorch implementation for Region Attention Transformer for Medical Image Restoration [![arXiv](https://img.shields.io/badge/arXiv-b31b1b.svg)](https://arxiv.org/abs/2407.09268) (MICCAI 2024).
+PyTorch implementation for Region Attention Transformer for Medical Image Restoration [![arXiv](https://img.shields.io/badge/arXiv-b31b1b.svg)](https://arxiv.org/abs/2407.09268) (MICCAI 2024). 
+
+:rocket::rocket::rocket:Check our paper collection of recent **Awsome-Medical-Image-Restoration** [![Star](https://img.shields.io/github/stars/Yaziwel/Awesome-Medical-Image-Restoration.svg?style=social&label=Star)](https://github.com/Yaziwel/Awesome-Medical-Image-Restoration)
 
 ## Network Architecture
 
